@@ -1,0 +1,130 @@
+.grid {
+  display: grid;
+  column-gap: 40px;
+  row-gap: 50px;
+  text-align: justify;
+}
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 300;
+  color: black;
+  margin: 0 5% 0 5%;
+}
+
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: black;
+}
+
+.navrow {
+  margin-bottom: 35px;
+  margin-left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none;
+  padding: 0;
+  /* justify-content: ; */
+}
+
+
+ul.navrow>li {
+  padding: 0 10px 10px 0;
+  /* margin: auto; */
+}
+
+
+.navrow a {
+  text-decoration: none;
+}
+
+.navrow>a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+  font-weight: 300;
+}
+
+#logo {
+  font-weight: 500;
+}
+
+.left-element {
+
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns: subgrid;
+  display: grid;
+  grid-template-columns: 8fr 5fr;
+}
+
+.left-element>* {
+  align-self: center;
+}
+
+.right-element {
+
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns: subgrid;
+  display: grid;
+  grid-template-columns: 5fr 8fr;
+
+}
+
+.right-element>* {
+  align-self: center;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 1.8em;
+}
+
+
+@media(max-width: 600px) {
+  body {
+    margin: 0
+  }
+
+  .right-element {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    order: 1;
+  }
+
+  .left-element {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+  }
+
+  .right-element :nth-child(2) {
+    order: 1;
+  }
+
+  .right-element :nth-child(1) {
+    order: 2;
+  }
+}
+
+
+* {
+  min-width: 0;
+  min-height: 0;
+}
+
+.legend {
+  padding: 0% 5% 0% 5%;
+}
+
+canvas {
+  display: block;
+}

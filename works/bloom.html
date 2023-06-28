@@ -11,6 +11,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
     rel="stylesheet">
+  <script src="/libraries/p5.min.js"></script>
+  <script src="/libraries/p5.sound.min.js"></script>
 </head>
 
 <body>
@@ -19,9 +21,9 @@
     <li class="item"><a href="/about.html">ABOUT</a></li>
   </ul>
   <div class="grid">
-    <div class="left-element">
+    <div class="right-element">
       <div class="legend">
-        <h2><a href="/works/bloom.html">Bloom</a></h2>
+        <h2>Bloom</h2>
         <p>
           This animation applies the classic Game of Life algorithm
           to the capture of your webcam.
@@ -45,11 +47,11 @@
           of, where they will thrive and perish, small or large.
         </p>
       </div>
-      <div>
-        <img style="width: 100%;" src="img/Bloom.jpg" />
+      <div id="canvas">
       </div>
     </div>
-  </div>
+    <script src="bloom/js/sketch.js"></script>
+
 </body>
 
 </html>
