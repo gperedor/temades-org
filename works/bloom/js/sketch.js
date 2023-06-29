@@ -25,7 +25,7 @@ function setup() {
   capture.hide();
 
   frameRate(fps);
-  canvas.parent('canvas');
+  canvas.parent('preview');
 
 }
 

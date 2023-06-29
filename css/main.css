@@ -58,35 +58,43 @@ a:visited {
 }
 
 .left-element {
-
   min-width: 0;
   min-height: 0;
   grid-template-columns: subgrid;
   display: grid;
   grid-template-columns: 8fr 5fr;
+  grid-template-rows: repeat(1fr);
 }
 
 .left-element>* {
-  align-self: center;
+  align-self: stretch;
 }
 
 .right-element {
-
   min-width: 0;
   min-height: 0;
   grid-template-columns: subgrid;
   display: grid;
   grid-template-columns: 5fr 8fr;
-
+  grid-template-rows: repeat(1fr);
 }
 
 .right-element>* {
   align-self: center;
 }
 
-h2 {
+.legend {
+  padding: 0% 5% 0% 5%;
+}
+
+.title {
+  padding: 0% 5% 0% 5%;
   font-weight: 200;
   font-size: 1.8em;
+}
+
+.preview {
+  padding-top: 1.2em;
 }
 
 
@@ -106,12 +114,17 @@ h2 {
     grid-template-rows: 2fr;
   }
 
-  .right-element :nth-child(2) {
+  .left-element>.title, .right-element>.title {
     order: 1;
   }
 
-  .right-element :nth-child(1) {
+  .left-element>.preview, .right-element>.preview {
     order: 2;
+    padding: 0 5% 0 5%;
+  }
+
+  .left-element>.legend, .right-element>.legend {
+    order: 3
   }
 }
 
@@ -121,9 +134,6 @@ h2 {
   min-height: 0;
 }
 
-.legend {
-  padding: 0% 5% 0% 5%;
-}
 
 canvas {
   display: block;
